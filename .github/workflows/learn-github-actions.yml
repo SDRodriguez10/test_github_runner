@@ -1,5 +1,6 @@
 name: Test pass/fail
 run-name: ${{ github.actor }} is learning GitHub Actions
+runs-on: self-hosted
 on: [push]
 jobs:
   setup:
