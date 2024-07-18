@@ -25,5 +25,5 @@ jobs:
       
       - name: Run unittests 
         run: |
-         source/test_fail.py
-         source/test_pass.py
+         python source/test_fail.py
+         python source/test_pass.py
