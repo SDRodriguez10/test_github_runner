@@ -1,4 +1,4 @@
-name: zzzz
+name: Test pass/fail
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: source/test_fail.py
+      - run: source/test_pass.py
