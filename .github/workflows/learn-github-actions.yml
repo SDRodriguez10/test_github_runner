@@ -2,7 +2,7 @@ name: Test pass/fail
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  setup:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code repo
@@ -23,7 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy
       
+  run-unittests:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run unittests 
         run: |
-         python source/test_fail.py
-         python source/test_pass.py
+          python source/test_fail.py
+          python source/test_pass.py
