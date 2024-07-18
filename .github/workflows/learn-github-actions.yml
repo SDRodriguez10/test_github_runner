@@ -24,5 +24,6 @@ jobs:
           pip install numpy
       
       - name: Run unittests 
-        run: source/test_fail.py
-        run: source/test_pass.py
+        run: |
+         source/test_fail.py
+         source/test_pass.py
