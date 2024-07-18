@@ -18,5 +18,11 @@ jobs:
         with:
          python-version: '3.7'
 
-      - run: source/test_fail.py
-      - run: source/test_pass.py
+      - name: Install dependencies and packages
+        run: | 
+          python -m pip install --upgrade pip
+          pip install numpy
+      
+      - name: Run unittests 
+        run: source/test_fail.py
+        run: source/test_pass.py
