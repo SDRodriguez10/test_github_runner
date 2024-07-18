@@ -23,18 +23,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy
 
-
- # run-unittests:
- #   runs-on: ubuntu-latest
- #   steps:
       - name: Run unittests 
         run: |
           python source/test_fail.py
-          python source/test_pass.py    
-#  run-unittests:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Run unittests 
-#        run: |
-#          python source/test_fail.py
-#          python source/test_pass.py
+          python source/test_pass.py   
+          python source/test_print_hello.py 
