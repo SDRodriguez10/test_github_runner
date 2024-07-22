@@ -8,6 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout code repo
+        timeout-minutes: 4300
         uses: actions/checkout@v4
 
       - name: Set up Python '3.8.6'
